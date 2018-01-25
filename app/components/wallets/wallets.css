@@ -1,0 +1,112 @@
+.cryptoWalletHomeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.walletList {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  background-color: #f4f7f9;
+}
+.cryptoListSearchBarCon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 62px;
+  border-bottom: rgba(128, 128, 128, 0.15) solid 1px;
+}
+
+.cryptoStockSearchInput {
+  height: 96%;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  outline: none;
+  font-size: 18px;
+  border: none;
+  background-color: #f4f7f9;
+  margin-right: auto;
+}
+.cryptoStockSearchInput :focus {
+  outline: none;
+}
+.cryptoNameContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto 5px auto 10px;
+}
+
+.cryptosContainer {
+  display: flex;
+  flex-direction: row;
+  height: 62px;
+  border-bottom: rgba(128, 128, 128, 0.15) solid 1px;
+  flex-shrink: 0;
+}
+.walletImg{
+  height: 55px;
+}
+.walletInfo{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.walletInfoName{
+  display: flex;
+}
+.walletInfoCoinInfo{
+  display: flex;
+  flex-direction: row;
+}
+.walletInfoCoinInfoType{
+  margin-right: 5px;
+}
+.stockButtonContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.stockButton {
+  background-color: #21CE99;
+  color: white;
+  border-radius: 10px;
+  width: 105px;
+  height: 26px;
+  text-align: center;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 5px;
+}
+.cryptoPortfolioContainer{
+  display: flex;
+  flex-direction: column;
+}
+.portfolioPieContainer{
+  display: flex;
+  flex-direction: row;
+}
+.holdingsGraph{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.allocationGraph{
+  margin-left: auto;
+  margin-right: auto;
+}
+.aggregateWalletGraph{
+  margin: auto;
+}
+.portfolioWalletGraph{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

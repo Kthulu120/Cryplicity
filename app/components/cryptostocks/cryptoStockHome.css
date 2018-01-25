@@ -1,0 +1,217 @@
+.cryptoStockHomeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cryptoList {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  background-color: #f4f7f9;
+}
+
+.cryptoListSearchBarCon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 62px;
+  border-bottom: rgba(128, 128, 128, 0.15) solid 1px;
+}
+
+.cryptoStockSearchInput {
+  height: 96%;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  outline: none;
+  font-size: 18px;
+  border: none;
+  background-color: #f4f7f9;
+  margin-right: auto;
+}
+
+.cryptoStockSearchInput :focus {
+  outline: none;
+}
+
+.cryptosContainer {
+  display: flex;
+  flex-direction: row;
+  height: 62px;
+  border-bottom: rgba(128, 128, 128, 0.15) solid 1px;
+  flex-shrink: 0;
+}
+
+.cryptosContainer :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 50px;
+  border-bottom: rgba(128, 128, 128, 0.15) solid 1px;
+}
+
+.cryptosContainer ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 1px;
+}
+
+.cryptoNameContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto auto 10px;
+}
+
+.cryptoName {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+.cryptoAmt {
+  color: #C1C2CE;
+}
+
+.cryptoSmallChart {
+  margin: auto;
+}
+
+.stockButtonContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.stockButton {
+  background-color: #21CE99;
+  color: white;
+  border-radius: 10px;
+  width: 105px;
+  height: 26px;
+  text-align: center;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 5px;
+}
+
+.cryptosInnerListContainer {
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.cryptoStockChart {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.cryptoStockChartNameContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+.cryptoStockChartNameContainerLeft {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: 150px;
+}
+
+.cryptoStockChartNameContainerRight {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 200px;
+  align-items: baseline;
+}
+
+.cryptoStockChartGraph {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+.cryptoStockInformation {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: auto;
+}
+
+.cryptoStockInformationLabel {
+  display: flex;
+  font-size: 20px;
+}
+
+.cryptoStockInformationColumn {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin-left: 155px;
+  margin-right: 25px;
+
+}
+.cryptoStockInformationColumnTwo {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  width: 170px;
+  margin-right: 25px;
+}
+.cryptoStockInformationStatKey {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+  margin-right: 25px;
+  color: #C4CBD1;
+  text-transform: uppercase;
+}
+
+.cryptoStockInformationStatValue {
+  margin-left: auto;
+  font-weight: 600;
+  color: #5d5d5d;
+}
+
+.mainChartGraphic {
+  width: 1200px;
+  height: 400px !important;
+}
+.cryptoStockInformationRowCon{
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px rgba(140, 140, 140, 0.17);
+}
+.activeTab{
+  z-index: 99;
+  color: black;
+  border-bottom: 2px solid #21CE99;
+  font-weight: 600;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: default;
+}
+.regularTab{
+  z-index: 99;
+  color: #21CE99;
+  padding-left: 10px;
+  cursor: default;
+  padding-right: 10px;
+}
+.cryptoStockInformationColumnAbout{
+  margin-left: 15px;
+  width: 500px;
+  color: gray;
+}

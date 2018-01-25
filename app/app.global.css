@@ -1,0 +1,90 @@
+@import "~font-awesome/css/font-awesome.css";
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(MaterialIcons-Regular.woff2) format('woff2'),
+    url(MaterialIcons-Regular.woff) format('woff'),
+    url(MaterialIcons-Regular.ttf) format('truetype');
+}
+
+body{
+  background-color: #2E2C4D ;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+#root{
+  height: 100%;
+}
+.appContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.active-nav{
+  color: white !important;
+}
+
+#root > div {
+  height: 100%;
+}
+
+.recharts-legend-item {
+  color: rgb(124, 122, 174);
+  font-weight: 900;
+}
+.aggregatPieChart{
+  margin-right: auto;
+}
+div{
+  font-family: 'Roboto', sans-serif;
+}
+#cryptoSearchHomeSearchIcon{
+  color: #838484;
+  font-size: 26px;
+  margin: auto;
+}
+.miniCryptoChart{
+  width: 60px !important;
+}

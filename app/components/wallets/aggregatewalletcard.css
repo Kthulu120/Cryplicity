@@ -1,0 +1,49 @@
+.walletAggInfoContainer {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 10px;
+  display: flex;
+}
+
+.walletMainHeaderImg {
+  margin-left: auto;
+}
+
+.walletAggContainer {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("https://i.imgur.com/tK8GmlV.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+}
+
+.walletAggInfo {
+  font-family: 'sans-serif';
+  color: rgb(124, 122, 174);
+  margin-left: 5px;
+  margin-right: auto;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.walletAggTotal {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.walletAggText {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+

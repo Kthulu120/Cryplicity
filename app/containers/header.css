@@ -1,0 +1,20 @@
+.navBar{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navBarContainer{
+  width: 175px;
+  background-color: #f4f7f9;
+  border-right: rgba(128, 128, 128, 0.15) solid 1px;
+}
+.logo{
+  height: 60px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-color: #21CE99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

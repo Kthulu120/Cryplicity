@@ -1,0 +1,10 @@
+.walletBalanceTrans{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.walletAddressAndGraphContainer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
