@@ -4,6 +4,7 @@
 import axios from 'axios';
 import Coin from './Coin';
 import Transaction from '../transaction/Transaction';
+import API_KEYS from './../../utils/API_KEY';
 
 const uuidv4 = require('uuid/v4');
 
@@ -55,5 +56,5 @@ export default class Ethereum extends Coin {
   /**
    * Generates a new Key Pair
    */
-  generateNewAddress = () => axios.post('https://api.blockcypher.com/v1/eth/main/addrs?token=3812f2ef457040beacae2eaa56a44c10')
+  generateNewAddress = () => axios.post(`https://api.blockcypher.com/v1/eth/main/addrs?token=${API_KEYS.BlockCypher}`)
 }

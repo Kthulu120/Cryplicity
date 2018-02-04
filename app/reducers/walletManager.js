@@ -1,15 +1,13 @@
 import { CREATE_A_WALLET, DELETE_A_WALLET, UPDATE_A_WALLET, SET_ALL_WALLETS, UPDATE_A_SELECTED_WALLET } from '../actions/wallets';
 import storeManager from './../lib/storage/StorageManager';
-import Wallet from './../lib/wallet/Wallet';
 const initialState = {
   wallets: [],
   selectedWallet: {}
 };
 
-
+// TODO: Integrate Redux Saga And get rid of unnecessary code
 export default function walletManager(state = initialState, action) {
   let newState;
-  let walletObj;
   switch (action.type) {
     case CREATE_A_WALLET:
       newState = Object.assign({}, state, { wallets: [...state.wallets, action.wallet] });

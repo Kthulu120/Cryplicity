@@ -4,8 +4,9 @@ import { Line, LineChart, ReferenceLine } from 'recharts';
 import axios from 'axios';
 import { IndividualStockTab } from './IndividualStockTab';
 import { BottomNavigation, BottomNavigationItem, Tabs } from 'material-ui';
-import {CryptoStockInformation} from "./CryptoStockInformation";
-import {CryptoStockChartNameContainer} from "./CryptoStockChartNameContainer";
+import { CryptoStockInformation } from './CryptoStockInformation';
+import { CryptoStockChartNameContainer } from './CryptoStockChartNameContainer';
+import { ErrorNotificationFactory } from '../../lib/notification/NotificationFactory';
 
 const emptyStyle = {
   margin: 'auto',
@@ -28,8 +29,17 @@ export default class CryptoStockHome extends Component {
       selectedTab: 0,
       selectedChartData: []
     };
-    setInterval(1800000, this.updateInformation());
   }
+
+
+  componentDidMount = () => {
+    this.updateInformation();
+  };
+
+  /**
+   * Sets which chart we're looking at, at the moment
+   * @param index the number representing the chart to show
+   */
   select = (index) => {
     switch (index) {
       case 0:
@@ -56,30 +66,25 @@ export default class CryptoStockHome extends Component {
     console.log(this.state.coinStocks[index]);
     axios.get(`https://min-api.cryptocompare.com/data/histominute?fsym=${this.state.coinStocks[index].symbol}&tsym=USD&limit=49&aggregate=30&e=CCCAGG`).then((response) => {
       this.setState({ oneDayData: response.data.Data });
-      if (this.state.selectedTab === 0)
-        this.setState({ selectedChartData: response.data.Data });
-    });
+      if (this.state.selectedTab === 0) { this.setState({ selectedChartData: response.data.Data }); }
+    }).catch((err) => ErrorNotificationFactory(err.message));
     axios.get(`https://min-api.cryptocompare.com/data/histominute?fsym=${this.state.coinStocks[index].symbol}&tsym=USD&limit=29&aggregate=6&e=CCCAGG`).then((response) => {
       this.setState({ sevenDayData: response.data.Data });
-      if (this.state.selectedTab === 1)
-        this.setState({ selectedChartData: response.data.Data });
-    });
+      if (this.state.selectedTab === 1) { this.setState({ selectedChartData: response.data.Data }); }
+    }).catch((err) => ErrorNotificationFactory(err.message));
 
     axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${this.state.coinStocks[index].symbol}&tsym=USD&limit=31&aggregate=1&e=CCCAGG`).then((response) => {
       this.setState({ oneMonthData: response.data.Data });
-      if (this.state.selectedTab === 2)
-        this.setState({ selectedChartData: response.data.Data });
-    });
+      if (this.state.selectedTab === 2) { this.setState({ selectedChartData: response.data.Data }); }
+    }).catch((err) => ErrorNotificationFactory(err.message));
     axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${this.state.coinStocks[index].symbol}&tsym=USD&limit=26&aggregate=7&e=CCCAGG`).then((response) => {
       this.setState({ sixMonthData: response.data.Data });
-      if (this.state.selectedTab === 3)
-        this.setState({ selectedChartData: response.data.Data });
-    });
+      if (this.state.selectedTab === 3) { this.setState({ selectedChartData: response.data.Data }); }
+    }).catch((err) => ErrorNotificationFactory(err.message));
     axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${this.state.coinStocks[index].symbol}&tsym=USD&limit=30&aggregate=12&e=CCCAGG`).then((response) => {
       this.setState({ oneYearData: response.data.Data });
-      if (this.state.selectedTab === 4)
-        this.setState({ selectedChartData: response.data.Data });
-    });
+      if (this.state.selectedTab === 4) { this.setState({ selectedChartData: response.data.Data }); }
+    }).catch((err) => ErrorNotificationFactory(err.message));
   };
 
   updateInformation = () => {
@@ -96,10 +101,11 @@ export default class CryptoStockHome extends Component {
         response.data[i].chartData.push({ price: oneHour });
       }
       this.setState({ coinStocks: response.data });
-    });
+    }).catch((err) => ErrorNotificationFactory(err.message));
   };
 
   render() {
+    // TODO: Clean this up
     return (
       <div className={styles.cryptoStockHomeContainer}>
         <div className={styles.cryptoList}>
@@ -119,8 +125,8 @@ export default class CryptoStockHome extends Component {
             ))}
           </div>
         </div>
-        { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0  ?  <div className={styles.cryptoStockChart}>
-          { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0  ? <CryptoStockChartNameContainer stock={this.state.coinStocks[this.state.selectedStock]} detailedStock={this.state.oneDayData[this.state.oneDayData.length - 1]} /> : <div />}
+        { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0 ? <div className={styles.cryptoStockChart}>
+          { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0 ? <CryptoStockChartNameContainer stock={this.state.coinStocks[this.state.selectedStock]} detailedStock={this.state.oneDayData[this.state.oneDayData.length - 1]} /> : <div />}
           <div className={styles.cryptoStockChartGraph}>
             <LineChart
               width={1000}
@@ -139,7 +145,7 @@ export default class CryptoStockHome extends Component {
             <div className={this.state.selectedTab === 4 ? styles.activeTab : styles.regularTab} onClick={(e) => { this.select(4); }}>1 Year</div>
           </div>
 
-          { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0  ? <CryptoStockInformation stock={this.state.coinStocks[this.state.selectedStock]} detailedStock={this.state.oneDayData[this.state.oneDayData.length - 1]} /> : <div />}
+          { this.state.coinStocks.length > 0 && this.state.selectedStock > -1 && this.state.oneDayData.length > 0 ? <CryptoStockInformation stock={this.state.coinStocks[this.state.selectedStock]} detailedStock={this.state.oneDayData[this.state.oneDayData.length - 1]} /> : <div />}
         </div> : <div style={emptyStyle}>SELECT A CRYPTO</div>}
 
 

@@ -10,7 +10,7 @@ import { ErrorNotificationFactory } from '../notification/NotificationFactory';
 const uuidv4 = require('uuid/v4');
 
 export default class BitcoinCash extends Coin {
-  constructor(coinslug = 'bitcoin-cash', ticker = 'bch', coinName = 'Bitcoin Cash') {
+  constructor(coinslug = 'zcash', ticker = 'zec', coinName = 'ZCash') {
     super(coinslug, ticker, coinName);
     this.baseConversion = 100000000;
   }
@@ -57,7 +57,7 @@ export default class BitcoinCash extends Coin {
    * Generates a new Key Pair
    */
   generateNewAddress = () => {
-    ErrorNotificationFactory('Cannot Create Address', 'Cannot Create Addresses With Bitcoin Cash Currently');
+    ErrorNotificationFactory('Cannot Create Address', 'Cannot Create Addresses With ZCash Currently');
     throw new Error('Cannot Create Address With This Coin');
   }
 

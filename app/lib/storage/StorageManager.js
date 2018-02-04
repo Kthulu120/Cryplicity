@@ -2,7 +2,7 @@ import Wallet from './../wallet/Wallet';
 import { dispatch } from 'react-redux';
 import { store } from './../../index';
 import { SET_WALLETS } from '../../actions/wallets';
-import {LOAD_SETTINGS} from "../../actions/settings";
+import { LOAD_SETTINGS } from '../../actions/settings';
 
 const os = require('os');
 const storage = require('electron-json-storage');
@@ -13,7 +13,9 @@ const settingsStore = {
   },
 };
 
-
+/**
+ * Manages the persistence of the application
+ */
 class StoreManager {
   constructor() {
     this.store = storage;
@@ -73,7 +75,10 @@ class StoreManager {
       this.saveWallets();
     }
   };
-
+  /**
+   * Loads all of the wallets from storage if they exist
+   * @param stringArray - depreciated to be removed
+   */
   loadWWallets = (stringArray) => {
     const tempWallets = [];
     this.store.get('wallets', (error, data) => {
@@ -100,7 +105,7 @@ class StoreManager {
   };
 
   loadSettings = (settings) => {
-   store.dispatch(LOAD_SETTINGS(settings));
+    store.dispatch(LOAD_SETTINGS(settings));
   };
 }
 

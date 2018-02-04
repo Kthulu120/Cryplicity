@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './cryptoStockHome.css';
-import {Line, LineChart, ReferenceLine, Tooltip} from 'recharts';
+import {Legend, Line, LineChart, ReferenceLine, Tooltip} from 'recharts';
 
 const changeSelectedTab = () => {
 
@@ -18,6 +18,7 @@ export const CryptoStockGraphic = ({ chartData, selectedTab }) => (
         className={styles.mainChartGraphic}
       >
         <Tooltip />
+        <Legend />
         <ReferenceLine y={chartData.length > 0 ? chartData[0].close : 0} strokeDasharray="2 1" stroke="#AEB9C2" />
         <Line type="monotone" dataKey="close" dot={false} activeDot stroke="#82ca9d" />
       </LineChart>

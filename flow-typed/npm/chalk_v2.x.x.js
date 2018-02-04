@@ -1,4 +1,4 @@
-// flow-typed signature: b06b475699e7c017149371391dc23d21
+// flow-typed signature: fa51178772ad1f35158cb4238bc3f1eb
 // flow-typed version: da30fe6876/chalk_v2.x.x/flow_>=v0.25.x
 
 type $npm$chalk$StyleElement = {

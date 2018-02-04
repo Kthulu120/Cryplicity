@@ -1,8 +1,6 @@
 import React from "react";
 import {ConnectedRouter} from "react-router-redux";
 import {Switch, Route} from 'react-router';
-import CounterPage from "./CounterPage";
-import HomePage from "./HomePage";
 import {Col, Row} from 'react-flexbox-grid';
 import WalletContainer from "./state/WalletContainer";
 import {Paper} from "material-ui";

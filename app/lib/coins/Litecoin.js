@@ -5,6 +5,7 @@ import axios from 'axios';
 import Coin from './Coin';
 import Address from '../addresses/Address';
 import Transaction from '../transaction/Transaction';
+import API_KEYS from './../../utils/API_KEY';
 
 const uuidv4 = require('uuid/v4');
 
@@ -30,11 +31,11 @@ export default class Bitcoin extends Coin {
    */
   getRecentTransactions = (address) => {
     throw new Error('Cannot Get Litecoin');
-  }
+  };
 
   /**
    * Generates a new Key Pair
    */
-  generateNewAddress = () => axios.post('https://api.blockcypher.com/v1/ltc/main/addrs?token=3812f2ef457040beacae2eaa56a44c10')
+  generateNewAddress = () => axios.post(`https://api.blockcypher.com/v1/ltc/main/addrs?token=${API_KEYS.BlockCypher}`)
 
 }

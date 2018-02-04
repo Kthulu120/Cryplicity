@@ -41,7 +41,7 @@ export default class Address {
   /**
    * Deciphers an encrypted wallet if given the correct passphrase
    * @param passPhrase essentially the password being passed in to decrypt
-   * @returns {{status: string, message: string}}
+   * @returns {{status: string, message: string}} A response object detailing the if the phrase deciphered a private key
    */
   decipher = (passPhrase) => {
     const response = { status: 'error', message: '' };

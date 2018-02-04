@@ -1,4 +1,4 @@
-// flow-typed signature: 5528bf99a68e0361a1f551d9b50e64e3
+// flow-typed signature: a52ef25660e2172052618e087e7f31b7
 // flow-typed version: 37d8964a70/react-router-dom_v4.x.x/flow_>=v0.38.x <=v0.52.x
 
 declare module 'react-router-dom' {

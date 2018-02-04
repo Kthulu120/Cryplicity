@@ -1,3 +1,8 @@
+/**
+ * Slugifys a string
+ * @param text the string to be slugfied
+ * @returns {string} slugified string
+ */
 export const slugify = (text) => {
   return text.toString().toLowerCase()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -7,6 +12,12 @@ export const slugify = (text) => {
     .replace(/-+$/, '');            // Trim - from end of text
 };
 
+/**
+ * Method that simply abbreviates numbers
+ * @param num Number we're abbreviating
+ * @param fixed the anount of decimals that you want
+ * @returns {*} simplified number
+ */
 export const abbreviateNumber = (num, fixed) => {
   if (num === null) { return null; } // terminate early
   if (num === 0) { return '0'; } // terminate early
