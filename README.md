@@ -171,7 +171,9 @@ Support us with a donation and help us continue our efforts. Any ether you send 
 help out a little bit and donate to the developer fund fam.
 
 Ethereum Address : 0x958764057a6f16F9972C0F6a5a06FcEEa822D25B
+
 XRB Addy: xrb_1m4wshb86nyeua1etj6x11x5736son19aimwiayz4yrp5fe5b5jnf6zhhow6
+
 Litecoin Addy: LNUj7y1459wC8ZdEMdDmPfobhX7jBi7JHG
 
 Again thanks!!!
