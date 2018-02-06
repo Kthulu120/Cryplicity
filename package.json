@@ -1,10 +1,10 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.12.0",
+  "name": "Cryplicity",
+  "productName": "Cryplicity",
+  "version": "0.1.0",
   "private": true,
   "main": "./app/main.prod.js",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "description": "Cryplicity is a simple tool to track the market and your portfolio though it is still in very heavy development as of right now. Along with this support is being added for multiple coins and cleaning up the application to stop performance degradation. This project is being developed with the mindset no one should ever pay for anything for tracking their finances especially with something as volatile as today's crypto market.",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --colors",
@@ -34,7 +34,7 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "ElectronReact",
+    "productName": "Cryplicity",
     "appId": "org.develar.ElectronReact",
     "files": [
       "dist/",
@@ -76,29 +76,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
+    "url": "git+https://github.com/Kthulu120/mangle.git"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
+    "name": "Troy Smith",
+    "email": "ColonelTJ120@gmail.com",
+    "url": "https://github.com/Kthulu120"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
+    "url": "https://github.com/kthulu120/mangle/issues"
   },
   "keywords": [
     "electron",
-    "boilerplate",
-    "react",
-    "redux",
-    "flow",
+    "crypto",
+    "portfolio-tracker",
+    "portfolio manager",
+    "cryptocurrency",
     "sass",
     "webpack",
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/kthulu120/mangle/#readme",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
