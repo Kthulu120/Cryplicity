@@ -15,19 +15,29 @@ Hopefully Cryplicity helps you in your goal of grabbing that lambo to the moon, 
 
 ## Install
 
+#### For Regular Use
+  **Note:** This application will be under very heavy development until version 1.0.0 is released, but
+  using it until then should be perfectly fine, if you have any issues, open an issue through github describing the issue(though make sure there is no
+  existing issue similar to your already if possible)
+
+
+
+
+#### For Developers
+
 * **Note: requires a node version >= 7 and an npm version >= 4.**
 * **If you have installation or compilation issues with this project, please see [our debugging guide](https://github.com/chentsulin/electron-react-boilerplate/issues/400)**
 
 First, clone the repo via git:
 
 ```bash
-git clone --depth=1 https://github.com/chentsulin/electron-react-boilerplate.git your-project-name
+git clone --depth=1 https://github.com/Kthulu120/mangle 
 ```
 
 And then install dependencies with yarn.
 
 ```bash
-$ cd your-project-name
+$ cd mangle
 $ yarn
 ```
 **Note**: If you can't use [yarn](https://github.com/yarnpkg/yarn) for some reason, try `npm install`.
@@ -172,4 +182,6 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 
 
 ## License
+Thanks to electron-react-boilerplate for making life easy!
 MIT © [Troy Smith](https://github.com/kthulu120)
+
