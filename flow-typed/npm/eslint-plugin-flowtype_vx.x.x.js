@@ -1,4 +1,4 @@
-// flow-typed signature: fb0bf90e54ee1755edcff837669e2535
+// flow-typed signature: cacec74b27b717ff83ce26217711e2da
 // flow-typed version: <<STUB>>/eslint-plugin-flowtype_v^2.33.0/flow_v0.48.0
 
 /**
@@ -50,19 +50,11 @@ declare module 'eslint-plugin-flowtype/dist/rules/noDupeKeys' {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-flowtype/dist/rules/noMutableArray' {
-  declare module.exports: any;
-}
-
 declare module 'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes' {
   declare module.exports: any;
 }
 
 declare module 'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation' {
-  declare module.exports: any;
-}
-
-declare module 'eslint-plugin-flowtype/dist/rules/noUnusedExpressions' {
   declare module.exports: any;
 }
 
@@ -224,17 +216,11 @@ declare module 'eslint-plugin-flowtype/dist/rules/genericSpacing.js' {
 declare module 'eslint-plugin-flowtype/dist/rules/noDupeKeys.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noDupeKeys'>;
 }
-declare module 'eslint-plugin-flowtype/dist/rules/noMutableArray.js' {
-  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noMutableArray'>;
-}
 declare module 'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes'>;
 }
 declare module 'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation'>;
-}
-declare module 'eslint-plugin-flowtype/dist/rules/noUnusedExpressions.js' {
-  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noUnusedExpressions'>;
 }
 declare module 'eslint-plugin-flowtype/dist/rules/noWeakTypes.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noWeakTypes'>;

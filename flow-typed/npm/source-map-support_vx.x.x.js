@@ -1,4 +1,4 @@
-// flow-typed signature: d52ea2a128151ebdad33c8479a8425f3
+// flow-typed signature: b874e13f8c3974d47fe0b29adecabcb9
 // flow-typed version: <<STUB>>/source-map-support_v^0.4.15/flow_v0.48.0
 
 /**
@@ -26,6 +26,10 @@ declare module 'source-map-support/browser-source-map-support' {
   declare module.exports: any;
 }
 
+declare module 'source-map-support/build' {
+  declare module.exports: any;
+}
+
 declare module 'source-map-support/register' {
   declare module.exports: any;
 }
@@ -34,13 +38,23 @@ declare module 'source-map-support/source-map-support' {
   declare module.exports: any;
 }
 
+declare module 'source-map-support/test' {
+  declare module.exports: any;
+}
+
 // Filename aliases
 declare module 'source-map-support/browser-source-map-support.js' {
   declare module.exports: $Exports<'source-map-support/browser-source-map-support'>;
+}
+declare module 'source-map-support/build.js' {
+  declare module.exports: $Exports<'source-map-support/build'>;
 }
 declare module 'source-map-support/register.js' {
   declare module.exports: $Exports<'source-map-support/register'>;
 }
 declare module 'source-map-support/source-map-support.js' {
   declare module.exports: $Exports<'source-map-support/source-map-support'>;
+}
+declare module 'source-map-support/test.js' {
+  declare module.exports: $Exports<'source-map-support/test'>;
 }

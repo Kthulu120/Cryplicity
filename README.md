@@ -3,7 +3,11 @@
 ### A Cool Crypto Tool
 
 Cryplicity is a simple tool to track the market and your portfolio though it is still in very heavy development as of right now. Along with this support is being added for
-multiple coins and cleaning up the application to stop performance degradation.
+multiple coins and cleaning up the application to stop performance degradation. This project is being developed with the mindset no one should ever pay for anything for tracking their
+finances especially with something as volatile as today's crypto market. While still in a definite pre-release stage with important features needing to be fixed and added, 
+
+Hopefully Cryplicity helps you in your goal of grabbing that lambo to the moon, but if that's not possible then it can at least help you with your assets.
+
 ## Screenshot
 
 ![Cryplicity Screenshot](https://i.imgur.com/UM0OlNq.png)
@@ -87,6 +91,16 @@ To package apps with options:
 $ npm run package -- --[option]
 ```
 
+### Current Issues
+* The UI is slow often
+* The Wallet Manager is buggy so this must be improved
+* Validating and working with more currencies
+* Fixing the horrid news feed
+* Adding in aggregative portfolio tracking
+* Add a logo or icon
+
+
+
 ## Further commands
 
 To run the application without packaging run
@@ -143,9 +157,14 @@ see discusses in [#118](https://github.com/chentsulin/electron-react-boilerplate
 
 ## Backers
 
-Support us with a donation and help us continue our efforts. Any ether you send feeds a starving talented developer.
+Support us with a donation and help us continue our efforts. Any ether you send feeds a starving talented developer. Don't let the devs time be for nothing
+help out a little bit and donate to the developer fund fam.
 
 Ethereum Address : 0x958764057a6f16F9972C0F6a5a06FcEEa822D25B
+XRB Addy: xrb_1m4wshb86nyeua1etj6x11x5736son19aimwiayz4yrp5fe5b5jnf6zhhow6
+Litecoin Addy: LNUj7y1459wC8ZdEMdDmPfobhX7jBi7JHG
+
+Again thanks!!!
 
 ## Sponsors
 

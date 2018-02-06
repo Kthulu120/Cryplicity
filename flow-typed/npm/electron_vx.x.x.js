@@ -1,4 +1,4 @@
-// flow-typed signature: 908133bc644243580f869dfeaeb40b87
+// flow-typed signature: 6cc1f1d59ba88ea7fa0492a01388ad6c
 // flow-typed version: <<STUB>>/electron_v^1.6.10/flow_v0.48.0
 
 /**
@@ -30,6 +30,14 @@ declare module 'electron/install' {
   declare module.exports: any;
 }
 
+declare module 'electron/test/errors' {
+  declare module.exports: any;
+}
+
+declare module 'electron/test/index' {
+  declare module.exports: any;
+}
+
 // Filename aliases
 declare module 'electron/cli.js' {
   declare module.exports: $Exports<'electron/cli'>;
@@ -42,4 +50,10 @@ declare module 'electron/index.js' {
 }
 declare module 'electron/install.js' {
   declare module.exports: $Exports<'electron/install'>;
+}
+declare module 'electron/test/errors.js' {
+  declare module.exports: $Exports<'electron/test/errors'>;
+}
+declare module 'electron/test/index.js' {
+  declare module.exports: $Exports<'electron/test/index'>;
 }
