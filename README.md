@@ -19,6 +19,9 @@ Hopefully Cryplicity helps you in your goal of grabbing that lambo to the moon, 
   **Note:** This application will be under very heavy development until version 1.0.0 is released, but
   using it until then should be perfectly fine, if you have any issues, open an issue through github describing the issue(though make sure there is no
   existing issue similar to your already if possible)
+  
+  
+  All you have to do is goto the ![releases page](https://github.com/Kthulu120/mangle/releases) and download the right file for your system.
 
 
 
