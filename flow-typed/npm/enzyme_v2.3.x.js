@@ -1,5 +1,5 @@
-// flow-typed signature: a1fceaefab821f37dbb2f68fae2a79eb
-// flow-typed version: d7a8d069fa/enzyme_v2.3.x/flow_>=v0.28.x <=v0.52.x
+// flow-typed signature: 9717252208987f3ac34d522928f89161
+// flow-typed version: 792f604e07/enzyme_v2.3.x/flow_>=v0.28.x <=v0.52.x
 
 declare module "enzyme" {
   declare type PredicateFunction<T: Wrapper> = (
@@ -56,7 +56,7 @@ declare module "enzyme" {
     setContext(context: Object): this,
     instance(): React$Component<*, *, *>,
     update(): this,
-    debug(): string,
+    debug(options?: Object): string,
     type(): string | Function | null,
     name(): string,
     forEach(fn: (node: this, index: number) => mixed): this,

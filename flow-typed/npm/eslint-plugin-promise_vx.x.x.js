@@ -1,4 +1,4 @@
-// flow-typed signature: b6cdee81f2887f8c013f91d182f2b249
+// flow-typed signature: 63a43ee9ed120e332cf2c9f8a7c2bd11
 // flow-typed version: <<STUB>>/eslint-plugin-promise_v^3.5.0/flow_v0.48.0
 
 /**
@@ -74,6 +74,10 @@ declare module 'eslint-plugin-promise/rules/no-promise-in-callback' {
   declare module.exports: any;
 }
 
+declare module 'eslint-plugin-promise/rules/no-return-in-finally' {
+  declare module.exports: any;
+}
+
 declare module 'eslint-plugin-promise/rules/no-return-wrap' {
   declare module.exports: any;
 }
@@ -135,6 +139,9 @@ declare module 'eslint-plugin-promise/rules/no-nesting.js' {
 }
 declare module 'eslint-plugin-promise/rules/no-promise-in-callback.js' {
   declare module.exports: $Exports<'eslint-plugin-promise/rules/no-promise-in-callback'>;
+}
+declare module 'eslint-plugin-promise/rules/no-return-in-finally.js' {
+  declare module.exports: $Exports<'eslint-plugin-promise/rules/no-return-in-finally'>;
 }
 declare module 'eslint-plugin-promise/rules/no-return-wrap.js' {
   declare module.exports: $Exports<'eslint-plugin-promise/rules/no-return-wrap'>;

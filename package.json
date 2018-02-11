@@ -202,6 +202,7 @@
     "moment": "^2.20.1",
     "niceware": "^1.0.4",
     "number-converter": "^1.2.1",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-chartjs-2": "^2.6.4",
     "react-dom": "^15.6.1",

@@ -14,7 +14,7 @@ export const IndividualStockTab = ({ stock, indexSelected, thisIndex, onClickCon
         {stock.name.length < 17 ? stock.name : stock.name.substring(0, 10) + "..."}
       </div>
       <div className={styles.cryptoAmt}>
-            N/A
+        {stock.symbol}
       </div>
     </div>
     <div className={styles.cryptoSmallChart}>

@@ -28,6 +28,10 @@ export default class SelectedWallet extends Component {
     return data;
   };
 
+
+  /**
+   * Populates the
+   */
   updateChart = () => {
     axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${this.props.selectedWallet.coin.ticker}&tsym=USD&limit=60&aggregate=1&e=CCCAGG`).then((response) => {
       this.setState({ historicalChart: this.transformUnixToHuman(response.data.Data) });

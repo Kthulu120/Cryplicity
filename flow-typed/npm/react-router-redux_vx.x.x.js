@@ -1,4 +1,4 @@
-// flow-typed signature: f56e5170377cde7565bfb9843765b7be
+// flow-typed signature: dcf41cc84db6dc2d480d341518755905
 // flow-typed version: <<STUB>>/react-router-redux_v^5.0.0-alpha.6/flow_v0.48.0
 
 /**
@@ -50,11 +50,19 @@ declare module 'react-router-redux/es/reducer' {
   declare module.exports: any;
 }
 
+declare module 'react-router-redux/es/selectors' {
+  declare module.exports: any;
+}
+
 declare module 'react-router-redux/middleware' {
   declare module.exports: any;
 }
 
 declare module 'react-router-redux/reducer' {
+  declare module.exports: any;
+}
+
+declare module 'react-router-redux/selectors' {
   declare module.exports: any;
 }
 
@@ -88,6 +96,9 @@ declare module 'react-router-redux/es/middleware.js' {
 declare module 'react-router-redux/es/reducer.js' {
   declare module.exports: $Exports<'react-router-redux/es/reducer'>;
 }
+declare module 'react-router-redux/es/selectors.js' {
+  declare module.exports: $Exports<'react-router-redux/es/selectors'>;
+}
 declare module 'react-router-redux/index' {
   declare module.exports: $Exports<'react-router-redux'>;
 }
@@ -99,6 +110,9 @@ declare module 'react-router-redux/middleware.js' {
 }
 declare module 'react-router-redux/reducer.js' {
   declare module.exports: $Exports<'react-router-redux/reducer'>;
+}
+declare module 'react-router-redux/selectors.js' {
+  declare module.exports: $Exports<'react-router-redux/selectors'>;
 }
 declare module 'react-router-redux/umd/react-router-redux.js' {
   declare module.exports: $Exports<'react-router-redux/umd/react-router-redux'>;

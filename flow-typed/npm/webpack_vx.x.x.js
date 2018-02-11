@@ -1,4 +1,4 @@
-// flow-typed signature: 136ee065b99bf21930ff92960d74f517
+// flow-typed signature: 16010fb800fb43a21d5b596ccfc006b1
 // flow-typed version: <<STUB>>/webpack_v^3.0.0/flow_v0.48.0
 
 /**
@@ -102,6 +102,10 @@ declare module 'webpack/lib/AsyncDependenciesBlock' {
   declare module.exports: any;
 }
 
+declare module 'webpack/lib/AsyncDependencyToInitialChunkWarning' {
+  declare module.exports: any;
+}
+
 declare module 'webpack/lib/AutomaticPrefetchPlugin' {
   declare module.exports: any;
 }
@@ -151,6 +155,10 @@ declare module 'webpack/lib/Compiler' {
 }
 
 declare module 'webpack/lib/ConstPlugin' {
+  declare module.exports: any;
+}
+
+declare module 'webpack/lib/ContextExclusionPlugin' {
   declare module.exports: any;
 }
 
@@ -1038,6 +1046,10 @@ declare module 'webpack/lib/util/identifier' {
   declare module.exports: any;
 }
 
+declare module 'webpack/lib/util/Queue' {
+  declare module.exports: any;
+}
+
 declare module 'webpack/lib/util/Semaphore' {
   declare module.exports: any;
 }
@@ -1175,6 +1187,9 @@ declare module 'webpack/lib/APIPlugin.js' {
 declare module 'webpack/lib/AsyncDependenciesBlock.js' {
   declare module.exports: $Exports<'webpack/lib/AsyncDependenciesBlock'>;
 }
+declare module 'webpack/lib/AsyncDependencyToInitialChunkWarning.js' {
+  declare module.exports: $Exports<'webpack/lib/AsyncDependencyToInitialChunkWarning'>;
+}
 declare module 'webpack/lib/AutomaticPrefetchPlugin.js' {
   declare module.exports: $Exports<'webpack/lib/AutomaticPrefetchPlugin'>;
 }
@@ -1213,6 +1228,9 @@ declare module 'webpack/lib/Compiler.js' {
 }
 declare module 'webpack/lib/ConstPlugin.js' {
   declare module.exports: $Exports<'webpack/lib/ConstPlugin'>;
+}
+declare module 'webpack/lib/ContextExclusionPlugin.js' {
+  declare module.exports: $Exports<'webpack/lib/ContextExclusionPlugin'>;
 }
 declare module 'webpack/lib/ContextModule.js' {
   declare module.exports: $Exports<'webpack/lib/ContextModule'>;
@@ -1876,6 +1894,9 @@ declare module 'webpack/lib/UseStrictPlugin.js' {
 }
 declare module 'webpack/lib/util/identifier.js' {
   declare module.exports: $Exports<'webpack/lib/util/identifier'>;
+}
+declare module 'webpack/lib/util/Queue.js' {
+  declare module.exports: $Exports<'webpack/lib/util/Queue'>;
 }
 declare module 'webpack/lib/util/Semaphore.js' {
   declare module.exports: $Exports<'webpack/lib/util/Semaphore'>;

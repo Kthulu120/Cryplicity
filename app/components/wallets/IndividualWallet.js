@@ -29,7 +29,7 @@ export default class IndividualWallet extends Component {
   render() {
     const doesValueExist = this.props.coinValues.findIndex(value => value.coin === this.props.wallet.coinType);
     return (
-      <div className={styles.cryptosContainer} onClick={(e) => { store.dispatch(UPDATE_SELECTED_WALLET(this.props.wallet.id)); hist.push('/selectedWallet'); }}>
+      <div className={styles.cryptosContainer} onClick={(e) => { store.dispatch(UPDATE_SELECTED_WALLET(this.props.wallet.id)).then(() => hist.push('/selectedWallet'))}}>
         <div className={styles.cryptoNameContainer}>
           <img
             className={styles.walletImg}
