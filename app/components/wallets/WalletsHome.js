@@ -3,7 +3,6 @@ import { Col, Row } from 'react-flexbox-grid';
 import { Paper, Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui';
 import IndividualWallet from './IndividualWallet';
 import styles from './wallets.css';
-import { AggregateWalletCard } from './AggregateWalletCard';
 import { Cell, Label, Legend, Pie, PieChart, Tooltip } from 'recharts';
 import axios from 'axios';
 import { WalletChart } from './WalletChart';
@@ -39,6 +38,9 @@ export default class WalletsHome extends Component {
     this.setState({ holdingsArr: holdArr });
   };
 
+  /**
+   * Updates Information
+   */
   updateInformation = () => {
     this.props.wallets.forEach((wallet) => wallet.getBalancesForAddresses());
     this.props.wallets.forEach((wallet) => {
@@ -54,7 +56,6 @@ export default class WalletsHome extends Component {
           return response;
         }).then((response) => {
           wallet.getCoinAmount();
-          this.setState({ renderAgain: !this.state.renderAgain });
           this.updateHoldings();
         });
       }

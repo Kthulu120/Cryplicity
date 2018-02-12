@@ -5,13 +5,12 @@ import {
   TextField
 } from 'material-ui';
 import { coinDictionary } from '../../lib/coins/coinList';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import { dispatch } from 'react-redux';
 import { store } from './../../index';
 import styles from './article.css';
 import axios from 'axios'
 import redditImg from './../../assets/img/otherLogos/reddit.png'
-import {NewsArticle} from "./NewsArticle";
+import Card from "../Card";
 
 const style = {
   marginRight: 'auto',
@@ -100,7 +99,7 @@ export default class NewsFeed extends Component {
         <div className={styles.articleContainer}>
           {
             this.state.posts.map((post) => (
-              <NewsArticle post={post} />
+              <Card post={post} />
             ))
           }
         </div>
