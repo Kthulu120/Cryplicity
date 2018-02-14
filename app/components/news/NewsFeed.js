@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import {
-  ContentAdd, DropDownMenu, FlatButton, FontIcon, IconButton, IconMenu, MenuItem, Paper, RaisedButton,
+  ContentAdd, DropDownMenu, FlatButton, MenuItem,
   TextField
 } from 'material-ui';
-import { coinDictionary } from '../../lib/coins/coinList';
 import { dispatch } from 'react-redux';
-import { store } from './../../index';
 import styles from './article.css';
 import axios from 'axios';
-import redditImg from './../../assets/img/otherLogos/reddit.png';
 import Card from '../Card';
-
-const style = {
-  marginRight: 'auto',
-};
 
 export default class NewsFeed extends Component {
   constructor(props) {
@@ -32,7 +25,7 @@ export default class NewsFeed extends Component {
 
   openModal = () => {
 
-  }
+  };
 
   handleChange = (event, index, value) => this.setState({ value });
 
@@ -105,7 +98,7 @@ export default class NewsFeed extends Component {
         <div className={styles.articleContainer}>
           {
             this.state.posts.map((post) => (
-              <Card post={post} isSelf={post.data.is_self} selfText={post.data.selftext} openModal={this.openModal} />
+              <Card post={post} isSelf={post.data.is_self} selfText={post.data.selftext} openModal={this.openModal} id={post.data.name}/>
             ))
           }
         </div>
