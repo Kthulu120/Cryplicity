@@ -22,7 +22,7 @@ export default class Header extends Component {
         <ConnectedRouter history={this.props.history}>
           <div className={styles.navBar}>
             <div className={styles.logo}>
-              LOGO
+              Cryplicity
             </div>
             <NavLink to="/" activeClassName={'active-nav'}>
               <MenuItem style={menuStyle} leftIcon={<FontIcon className="material-icons" style={menuStyle}>assessment</FontIcon>}>Cryptos</MenuItem></NavLink>

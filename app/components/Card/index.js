@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import rocket from './../../assets/img/otherLogos/rocket.png';
 import Icon from './Icon';
 import { abbreviateNumber } from '../../lib/commons/util';
+import ImageChooser from '../../utils/ImageChooser';
+import { styled } from 'styled-components';
 
 function time2TimeAgo(ts) {
   // This function computes the delta between the
@@ -39,18 +41,20 @@ function time2TimeAgo(ts) {
   return 'some time ago';
 }
 
-function generateGradient() {
-  const OPTIONS = ['linear-gradient(135deg, #e0f7ff, 85%, #96e4ff)', 'linear-gradient(135deg, #f7e0f9, 80%, #f9eff3)', 'linear-gradient(135deg, #fff5d3, 60%, #ffcfc4)'];
+function generateGradient(isSelf) {
+  if (isSelf) { return 'linear-gradient(135deg, #e0f7ff, 85%, #96e4ff)'; }
+  const OPTIONS = ['linear-gradient(135deg, #f7e0f9, 80%, #f9eff3)', 'linear-gradient(135deg, #fff5d3, 60%, #ffcfc4)'];
   return OPTIONS[Math.floor(Math.random() * OPTIONS.length)];
-};
+}
+
 
 function Card(props) {
   return (
-    <Wrapper style={{background: generateGradient()}}>
-      <Icon src={rocket} alt={props.post.data.title} />
+    <Wrapper style={{ background: generateGradient(props.isSelf) }} onClick={props.openModal(props.selfText)}>
+      <Icon src={ImageChooser.redditFlairImageChooser(props.post.data.link_flair_text)} alt={props.post.data.title} />
       <Title>{props.post.data.title}</Title>
       <Description>{props.post.data.selftext}</Description>
-      <Author> {`${props.post.data.author} - ${abbreviateNumber(props.post.data.ups)} submitted  ${time2TimeAgo(props.post.data.created_utc)}`} </Author>
+      <Author> {`${props.post.data.author} - ${abbreviateNumber(props.post.data.ups)} Upvotes, submitted  ${time2TimeAgo(props.post.data.created_utc)}`} </Author>
     </Wrapper>
   );
 }

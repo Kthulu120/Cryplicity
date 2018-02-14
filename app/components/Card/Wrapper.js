@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const generateGradient = () => {
-  const OPTIONS = ['linear-gradient(135deg, #e0f7ff, 70%, #f4cff7)', 'linear-gradient(135deg, #f7e0f9, 70%, #f4cff7)'];
-  console.log(OPTIONS[Math.floor(Math.random() * OPTIONS.length)])
-  return OPTIONS[Math.floor(Math.random() * OPTIONS.length)];
-
-};
-
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;

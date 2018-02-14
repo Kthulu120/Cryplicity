@@ -5,6 +5,7 @@ const Icon = styled.img`
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5px;
 `;
 
 export default Icon;

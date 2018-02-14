@@ -108,7 +108,6 @@ $ npm run package -- --[option]
 * The UI is slow often
 * The Wallet Manager is buggy so this must be improved
 * Validating and working with more currencies
-* Fixing the horrid news feed
 * Adding in aggregative portfolio tracking
 * Add a logo or icon
 

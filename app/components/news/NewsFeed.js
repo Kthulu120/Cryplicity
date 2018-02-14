@@ -8,9 +8,9 @@ import { coinDictionary } from '../../lib/coins/coinList';
 import { dispatch } from 'react-redux';
 import { store } from './../../index';
 import styles from './article.css';
-import axios from 'axios'
-import redditImg from './../../assets/img/otherLogos/reddit.png'
-import Card from "../Card";
+import axios from 'axios';
+import redditImg from './../../assets/img/otherLogos/reddit.png';
+import Card from '../Card';
 
 const style = {
   marginRight: 'auto',
@@ -24,7 +24,14 @@ export default class NewsFeed extends Component {
       textBox: '',
       posts: []
     };
+  }
+
+  componentDidMount = () => {
     this.loadNewsFeed();
+  };
+
+  openModal = () => {
+
   }
 
   handleChange = (event, index, value) => this.setState({ value });
@@ -32,7 +39,6 @@ export default class NewsFeed extends Component {
   deleteSubreddit = (index) => {
     const arr = this.props.subreddits;
     arr.splice(index, 1);
-    console.log(arr);
     this.props.setSubreddits(arr);
     this.setState({ textBox: '' });
     this.loadNewsFeed();
@@ -47,12 +53,12 @@ export default class NewsFeed extends Component {
         urlString += `+${entry}`;
       }
     });
-    const url = 'https://www.reddit.com/r/{URL_STRING}.json'.replace("{URL_STRING}", urlString);
+    const url = 'https://www.reddit.com/r/{URL_STRING}.json'.replace('{URL_STRING}', urlString);
     axios.get(url).then((response) => {
       // Grabs Articles
-      this.setState({posts: response.data.data.children});
-    })
-  }
+      this.setState({ posts: response.data.data.children });
+    }).catch();
+  };
 
   render() {
     return (
@@ -99,7 +105,7 @@ export default class NewsFeed extends Component {
         <div className={styles.articleContainer}>
           {
             this.state.posts.map((post) => (
-              <Card post={post} />
+              <Card post={post} isSelf={post.data.is_self} selfText={post.data.selftext} openModal={this.openModal} />
             ))
           }
         </div>
