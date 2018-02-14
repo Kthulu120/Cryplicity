@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-flexbox-grid';
+import { Col } from 'react-flexbox-grid';
 import {
   ContentAdd, DropDownMenu, FlatButton, MenuItem,
   TextField

@@ -50,7 +50,7 @@ function generateGradient(isSelf) {
 
 function Card(props) {
   return (
-    <Wrapper style={{ background: generateGradient(props.isSelf) }} onClick={props.openModal(props.selfText)}>
+    <Wrapper style={{ background: generateGradient(props.isSelf) }}>
       <Icon src={ImageChooser.redditFlairImageChooser(props.post.data.link_flair_text)} alt={props.post.data.title} />
       <Title>{props.post.data.title}</Title>
       <Description>{props.post.data.selftext}</Description>

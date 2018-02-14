@@ -54,9 +54,10 @@ export default class TransactionTable extends React.Component {
       }}>
         <h5>Transactions</h5>
       <div style={divStyle}>
-
+        {console.log(this.props.addresses)}
         {this.props.addresses.map(superAddy => (
           <div>
+            {console.log(superAddy)}
             {superAddy.transactions.map((transaction) => (
               <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '5px', borderBottom: 'rgba(128, 128, 128, 0.15) solid 1px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
