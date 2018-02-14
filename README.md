@@ -1,6 +1,6 @@
 # Cryplicity
 
-### A Cool Crypto Tool
+### A Crypto Portfolio Tool
 
 Cryplicity is a simple tool to track the market and your portfolio though it is still in very heavy development as of right now. Along with this support is being added for
 multiple coins and cleaning up the application to stop performance degradation. This project is being developed with the mindset no one should ever pay for anything for tracking their
@@ -21,7 +21,7 @@ Hopefully Cryplicity helps you in your goal of grabbing that lambo to the moon, 
   existing issue similar to your already if possible)
   
   
-  All you have to do is goto the ![releases page](https://github.com/Kthulu120/mangle/releases) and download the right file for your system.
+  All you have to do is goto the ![releases page](https://github.com/Kthulu120/Cryplicity/releases) and download the right file for your system.
 
 
 
@@ -105,11 +105,8 @@ $ npm run package -- --[option]
 ```
 
 ### Current Issues
-* The UI is slow often
-* The Wallet Manager is buggy so this must be improved
 * Validating and working with more currencies
 * Adding in aggregative portfolio tracking
-* Add a logo or icon
 
 
 
@@ -163,7 +160,7 @@ see discusses in [#118](https://github.com/chentsulin/electron-react-boilerplate
 ## Backers
 
 Support us with a donation and help us continue our efforts. Any ether you send feeds a starving talented developer. Don't let the devs time be for nothing
-help out a little bit and donate to the developer fund fam.
+help out a little bit and donate to the developer fund, fam.
 
 Ethereum Address : 0x958764057a6f16F9972C0F6a5a06FcEEa822D25B
 
