@@ -7,6 +7,10 @@ import { CryptoStockInformation } from './CryptoStockInformation';
 import { CryptoStockChartNameContainer } from './CryptoStockChartNameContainer';
 import { ErrorNotificationFactory } from '../../lib/notification/NotificationFactory';
 import UtilFunctions from './../../utils/UtilFunctions';
+import Wrapper from './Wrapper';
+import InfoTabWrapper from './InfoTabWrapper';
+import SearchBar from '../../components/SearchBar';
+
 const emptyStyle = {
   margin: 'auto',
   fontSize: '50px',
@@ -138,12 +142,9 @@ export default class CryptoStockHome extends Component {
     // The tabs we want to actually render
     const coinStockTabs = this.filterCryptos(this.state.filterText);
     return (
-      <div className={styles.cryptoStockHomeContainer}>
-        <div className={styles.cryptoList}>
-          <div className={styles.cryptoListSearchBarCon}>
-            <i className="material-icons" id="cryptoSearchHomeSearchIcon">search</i>
-            <input placeholder="Search Cryptos" className={styles.cryptoStockSearchInput} onChange={e => this.setState({ filterText: e.target.value.toLowerCase() })} />
-          </div>
+      <Wrapper>
+        <InfoTabWrapper>
+          <SearchBar onInputChange={text => this.setState({ filterText: text })} />
           <div className={styles.cryptosInnerListContainer}>
             {coinStockTabs.map((stock, curIndex) => (
               <IndividualStockTab
@@ -155,9 +156,7 @@ export default class CryptoStockHome extends Component {
               />
             ))}
           </div>
-        </div>
-
-
+        </InfoTabWrapper>
         { cryptoSelected ? <div className={styles.cryptoStockChart}>
           { cryptoSelected ? <CryptoStockChartNameContainer stock={this.state.coinStocks[this.state.selectedStock]} detailedStock={this.state.oneDayData[this.state.oneDayData.length - 1]} /> : <div />}
           <div className={styles.cryptoStockChartGraph}>
@@ -184,7 +183,7 @@ export default class CryptoStockHome extends Component {
         </div> : <div style={emptyStyle}>SELECT A CRYPTO</div>}
 
 
-      </div>
+      </Wrapper>
     );
   }
 
