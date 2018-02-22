@@ -84,11 +84,11 @@ export default class WalletsHome extends Component {
             <input placeholder="Search Wallets" className={styles.cryptoStockSearchInput} />
           </div>
           <div className={styles.cryptosInnerListContainer}>
-            {this.props.wallets.map((wallet, curIndex) => (
+            {this.props.wallets.map((wallet) => (
               <IndividualWallet
                 wallet={wallet}
                 coinValues={this.state.coinvalues}
-                key={curIndex}
+                key={wallet.id}
               />
             ))}
           </div>

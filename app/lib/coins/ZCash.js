@@ -1,5 +1,5 @@
 /**
- * Bitcoin extension for Coin class
+ * ZCash extension for Coin class
  */
 import axios from 'axios';
 import Coin from './Coin';

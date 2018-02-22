@@ -15,6 +15,8 @@ import Dogecoin from "./Dogecoin";
 import Litecoin from "./Litecoin";
 import BitcoinCash from "./BitcoinCash";
 import Ripple from "./Ripple";
+import ZCash from "./ZCash";
+import Nano from "./Nano";
 
 export const coinList = [
   { name: 'bitcoin', ticker: 'BTC', option: 'Bitcoin' },
@@ -34,12 +36,13 @@ export const coinList = [
   { name: 'ethereum-classic', ticker: 'ETC', option: 'Ethereum Classic' },
   { name: 'tron', ticker: 'TRX', option: 'TRON' },
   { name: 'qtum', ticker: 'QTUM', option: 'Qtum' },
-  { name: 'bitconnect', ticker: 'BCC', option: 'BitConnect' },
   { name: 'populous', ticker: 'PPT', option: 'Populous' },
   { name: 'Lisk', ticker: 'LSK', option: 'Lisk' },
   { name: 'omisego', ticker: 'OmiseGO', option: 'OMG' },
   { name: 'zcash', ticker: 'ZEC', option: 'Zcash' },
   { name: 'dogecoin', ticker: 'DOGE', option: 'Dogecoin' },
+  { name: 'nano', ticker: 'NANO', option: 'Nano' },
+
 ];
 
 export const coinDictionary = {
@@ -60,12 +63,14 @@ export const coinDictionary = {
   'ethereum-classic': { name: 'ethereum-classic', ticker: 'ETC', option: 'Ethereum Classic', color: '#436c82', logo: mangleEgg, about: "We believe the core value proposition of any blockchain is immutability; valid transactions can never be erased or forgotten. Individuals interacting on Ethereum Classic are governed by this reality; Code is Law.This does not necessarily mean that code replaces existing laws, or that only code is law (there are many geographical jurisdictions), but it gives users the opportunity to enter into a new blockchain-based jurisdiction where agreements are governed by code. By entering into contracts on Ethereum Classic, you can be certain that the network remains neutral. The outcome of transactions will be dictated by code you voluntarily interact with. Unless explicitly defined by the contract code, there are no reversals, no undos, no opt-outs. Transactions are final; applications are unstoppable." },
   tron: { name: 'tron', ticker: 'TRX', option: 'TRON', color: '#1e5572', logo: mangleEgg, about: "TRON is a blockchain-based decentralized protocol that aims to construct a worldwide free content entertainment system with the blockchain and distributed storage technology. The protocol allows each user to freely publish, store and own data, and in the decentralized autonomous form, decides the distribution, subscription and push of contents and enables content creators by releasing, circulating and dealing with digital assets, thus forming a decentralized content entertainment ecosystem. Peiwo App with over 10 million users will become the first TRON-compatible entertainment APP." },
   qtum: { name: 'qtum', ticker: 'QTUM', option: 'Qtum', color: '#4cade0', logo: mangleEgg, about: "Combining a modified Bitcoin Core infrastructure with an intercompatible version of the Ethereum Virtual Machine (EVM), Qtum merges the reliability of Bitcoin’s unfailing blockchain with the endless possibilities provided by smart contracts. Designed with stability, modularity and interoperability in mind, Qtum is the foremost toolkit for building trusted decentralized applications, suited for real-world, business oriented use cases. Its hybrid nature, in combination with a first-of-its-kind PoS consensus protocol, allow Qtum applications to be compatible with major blockchain ecosystems, while providing native support for mobile devices and IoT appliances." },
-  bitconnect: { name: 'bitconnect', ticker: 'BCC', option: 'BitConnect', color: '#ff843d', logo: mangleEgg, about: "BitConnect is an open source all in one bitcoin and crypto community platform designed to provide multiple investment opportunities with cryptocurrency education where it is entirely possible to find the independence we all desire, in a community of like-minded, freedom loving individuals who, like you, are seeking the possibility of income stability in a very unstable world. " },
+  bitconnect: { name: 'bitconnect', ticker: 'BCC', option: 'BitConnect', color: '#ff843d', logo: mangleEgg, about: "SCAM" },
   populous: { name: 'populous', ticker: 'PPT', option: 'Populous', color: '#1d2856', logo: mangleEgg, about: "Populous is a P2P (peer-to-peer) invoice finance platform that is globalising what is currently a localised and limited market sector. It is a global invoice trading platform built on Blockchain's distributed ledger technology. Invoice finance is a form of funding that instantly unlocks the cash tied up in outstanding sales invoices. Business owners allow invoice buyers to buy invoices at a discounted rate in order to unlock their cash quicker. Once invoices are paid by the invoice debtor, the invoice buyer receives the amount previously agreed upon. Populous uniquely connects business owners with invoice buyers on a global scale by leveraging the security, transparency, and speed of Blockchain via XBRL data, Altman Z-score formula, smart contracts and stable fiat-pegged tokens. We will disrupt the traditional invoice financing system by eliminating the need for third parties or financial institutions by connecting businesses with global invoice buyers directly." },
   lisk: { name: 'lisk', ticker: 'LSK', option: 'Lisk', color: '#0d4077', logo: mangleEgg, about: "Nowadays, we have Apple’s App Store and Google’s Play Store. Both centralized solutions owned by corporations for centralized applications. The Lisk Foundation believes in a decentralised future. In order to achieve this, Lisk strives to make blockchain technology accessible for everybody by building a blockchain application platform likewise for users and developers." },
   omisego: { name: 'omisego', ticker: 'OmiseGO', option: 'OMG', color: '#1e3cff', logo: mangleEgg, about: "OmiseGO is the answer to a fundamental coordination problem amongst payment processors, gateways and financial institutions. By enabling decentralized exchange on a public blockchain at high volume and low cost, OmiseGO provides a next-generation value transfer service operating across currencies and asset types. Through the OmiseGO network connected to the Ethereum mainnet, anyone will be able to conduct financial transactions such as payments, remittances, payroll deposit, B2B commerce, supply-chain finance, loyalty programs, asset management and trading, and other on-demand services, in a completely decentralized and inexpensive way. Further, millions of mainstream users in the largest growing economies in the world will be enabled to make the transition from using fiat money to using decentralized currencies such as ETH, BTC, and others. The OmiseGO network is intrinsically agnostic between fiat and decentralized money: as far as adoption and usage go, the system is constructed so that the best currencies will win." },
   zcash: { name: 'zcash', ticker: 'ZEC', option: 'Zcash', color: '#af8021', logo: mangleEgg, about: "Bitcoin and most cryptocurrencies expose your entire payment history to the public. Zcash is the first open, permissionless cryptocurrency that can fully protect the privacy of transactions using zero-knowledge cryptography." },
   dogecoin: { name: 'dogecoin', ticker: 'DOGE', option: 'Dogecoin', color: '#af7501', logo: mangleEgg, about: "Dogecoin is a decentralized, peer-to-peer digital currency that enables you to easily send money online. Think of it as 'the internet currency.'" },
+  nano: { name: 'nano', ticker: 'NANO', option: 'Nano', color: '#1e3cfa', logo: mangleEgg, about: "Launched in 2015 by Colin LeMahieu as RaiBlocks, Nano is a low-latency payment platform that requires minimal resources; making Nano ideal for peer-to-peer transactions.Nano transactions happen immediately, so it's a currency you can use every day for purchases large or small.Pay for the purchase, not the privilege – zero fees on whatever you buy, from bus ticket to business class flight.Nano can process over 1000x more transactions per second than Bitcoin, so you'll never get stuck in a queue." },
+
 };
 
 export const coinObjectDictionary = {
@@ -86,10 +91,10 @@ export const coinObjectDictionary = {
   'ethereum-classic': new Coin('ethereum-classic', 'ETC', 'Ethereum Classic'),
   tron: new Coin('tron', 'TRX', 'TRON'),
   qtum: new Coin('qtum', 'QTUM', 'Qtum'),
-  bitconnect: new Coin('bitconnect', 'BCC', 'BitConnect'),
   populous: new Coin('populous', 'PPT', 'Populous'),
   lisk: new Coin('lisk', 'LSK', 'Lisk'),
   omisego: new Coin('omisego', 'OmiseGO', 'OMG'),
-  zcash: new Coin('zcash', 'ZEC', 'Zcash'),
+  zcash: new ZCash('zcash', 'ZEC', 'Zcash'),
   dogecoin: new Dogecoin('dogecoin', 'DOGE', 'Dogcoin'),
+  nano: new Nano('nano','NANO', 'Nano')
 };

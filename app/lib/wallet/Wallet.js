@@ -145,6 +145,7 @@ export default class Wallet {
   getCoinAmount = () => {
      this.coinAmt = 0;
     for (let i = 0; i < this.addresses.length; i += 1) {
+      console.log((this.addresses[i].balance / this.coin.baseConversion));
       this.coinAmt += (this.addresses[i].balance / this.coin.baseConversion);
     }
     store.dispatch(UPDATE_WALLET(this.id, this));

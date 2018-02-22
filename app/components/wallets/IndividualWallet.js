@@ -10,6 +10,7 @@ import styles from './wallets.css';
 import { Area, AreaChart } from 'recharts';
 import { hist } from './../../index';
 import axios from 'axios';
+import { abbreviateNumber } from '../../lib/commons/util';
 
 export default class IndividualWallet extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export default class IndividualWallet extends Component {
 
   componentDidMount = () => {
     this.updateInformation();
-  }
+  };
 
   updateInformation = () => {
     this.setState({ coinAmt: parseFloat(this.props.wallet.getCoinAmount()) });
@@ -48,7 +49,7 @@ export default class IndividualWallet extends Component {
         </div>
         <div className={styles.stockButtonContainer}>
           <div className={styles.stockButton}>
-            {doesValueExist < 0 ? 'N/A' : `$${(this.props.coinValues[doesValueExist].value * this.props.wallet.coinAmt).toFixed(2)}`}
+            {doesValueExist < 0 ? 'N/A' : `$${((this.props.coinValues[doesValueExist].value * this.props.wallet.coinAmt).toFixed(2))}`}
           </div>
         </div>
       </div>
